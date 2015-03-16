@@ -141,14 +141,15 @@ void keyPressed() {// Toggles for acceleration and velocity opps as well as the 
 }
 
 void displayStatus() {// A method that displays the status/ toggle states of the sketch and particle system (pretty clinical)
-  String[] vault = new String[7];
+  String[] vault = new String[8];
   vault[0] = "Wind On? " + windOn + " (Click 'W' to toggle.)";
   vault[1] = "Perl On? " + perlOn + " (Click 'P' to toggle.)";
   vault[2] = "accel2Line On? " + accel2LineOn + " (Click 'A' to toggle.)";
   vault[3] = "Vortex On? " + vortOn + " (Click 'V' to toggle.)";
-  vault[4] = "Point 1 at " + p1;
-  vault[5] = "Point 1 at " + p2;
-  vault[6] = "The center of the Particle System is at" + ps.location;
+  vault[4] = "Point 1 at " + p1 + " [Move by pressing 1]";
+  vault[5] = "Point 2 at " + p2 + " [Move by pressing 2]";
+  vault[6] = "The following two only apply while accel2line is on.";
+  vault[7] = "The center of the Particle System is at" + ps.location;
   fill(0, 0, 255);
   for (int i = 0; i< vault.length; i++) {
     if (i>3) {
